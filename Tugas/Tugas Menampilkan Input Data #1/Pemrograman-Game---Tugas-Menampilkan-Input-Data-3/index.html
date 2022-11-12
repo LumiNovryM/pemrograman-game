@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    
+
+            <label for="">Nama :</label>
+            <input type="text" id="input1"  onkeyup="stopNama()">
+            <br>
+            <br>
+
+            <label for="">Email</label>
+            <input type="text" id="input2" onfocus="stopEmail()">
+            <br>
+            <br>
+
+            <button id="submit" onclick="tampilkan()">Submit</button>
+            <button id="reset" onclick="reset()">Reset</button>
+
+            <p id="demo"></p>
+            <p id="demi"></p>
+
+
+
+    <script>
+
+    let nama = document.getElementById('input1');
+    nama.style.backgroundColor = 'red';
+    function stopNama() {
+        if(!document.getElementById('input1').value == ''){
+            document.getElementById('input1').style.backgroundColor = 'white';
+        }else{
+            document.getElementById('input1').style.backgroundColor = 'red';
+        }
+    }
+
+    let email = document.getElementById('input2');
+    email.style.backgroundColor = 'red'
+    function stopEmail() {
+        if(!document.getElementById('input2').value == ''){
+            document.getElementById('input2').style.backgroundColor = 'white';
+        }else{
+            document.getElementById('input2').style.backgroundColor = 'red';
+        }
+    }
+
+    function tampilkan() {
+        
+        let namaHasil = document.getElementById('input1').value;
+        let emailHasil = document.getElementById('input2').value;
+
+
+        document.getElementById('demo').innerHTML = namaHasil
+        document.getElementById('demi').innerHTML = emailHasil
+
+        document.getElementById('input1').readOnly = true;
+        document.getElementById('input2').readOnly = true;
+
+    }
+
+    function reset() {
+        let pilihan = confirm("Ingin Mereset Data Anda?")
+        if(pilihan == true){
+            location.reload();
+        }
+    }
+
+    </script>
+</body>
+</html>

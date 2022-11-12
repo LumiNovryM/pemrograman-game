@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/dashboard.css">
+    <title>The Adventure Of Zion</title>
+</head>
+<body> 
+    <div class="header">
+        <nav>
+            <h1>The Adventure Of Zion</h1>
+            <div class="profile">
+                <p>Excalibur</p>
+                <img src="asset/profile.jpeg" alt="Profile Image">
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" id="container">
+        <div class="menu">
+            <div class="username">
+                <h1>Player ExcaliburDEOX09</h1>
+            </div>
+            <div class="color">
+                <h4>Set Color</h4>
+                <input type="color" id="color">
+            </div>
+            <div class="btn">
+                <a href="#">Logout</a>
+                <button onclick="start()">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerDua" id="containerDua">
+        <div class="menuDua" id="menuDua">
+            
+        </div>
+        <div class="control">
+            <div class="bon">
+                <div class="bt">
+                    <button onmousedown="moveup()" class="top" onmouseup="clearmove()" ontouchstart="moveup()">UP</button>
+                </div>
+                <div class="bt dua">
+                    <button onmousedown="moveleft()" class="lr" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+                    <button onmousedown="moveright()" class="lr" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+    
+                </div>
+                <div class="bt">
+                    <button onmousedown="movedown()" class="bottom" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="decision" id="decision">
+         <div class="center">
+            <button type="">Try Again</button>
+            <button type="">Exit</button>
+         </div>
+    </div>
+
+    <footer id="footer">
+        <h3>Developed By Lumi, Copyright&#169; 2022, MIT License</h3>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

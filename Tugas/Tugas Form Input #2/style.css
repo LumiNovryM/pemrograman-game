@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #282A37;
+}
+
+#container{
+    width: 400px;
+    height:450px;
+    margin: 50px auto;
+    background: #282A37;
+    box-shadow:  20px 20px 49px #1a1b23,
+             -20px -20px 49px #36394b;
+             border-radius: 20px;
+    padding: 50px;
+    position: relative;
+}
+
+#container h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1D90F4;
+}
+
+.nama,.email,.phone,.foto{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.nama label, .email label, .phone label, .foto label{
+    color: #5F6371;
+}
+
+.nama input, .email input, .phone input, .foto input{
+    background-color: #323645;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+}
+
+#submit{
+    position: absolute;
+    right: 50px;
+    bottom: 45px;
+    padding: 10px 25px;
+    background-color: #1D90F4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#output{
+    display: none;
+    width: 400px;
+    height:450px;
+    margin: 50px auto;
+    background: #282A37;
+    box-shadow:  20px 20px 49px #1a1b23,
+             -20px -20px 49px #36394b;
+             border-radius: 20px;
+    padding: 50px;
+    position: relative;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#output img{
+    height: 100px;
+    border-radius: 10px;
+}
+
+#output h2{
+    text-align: center;
+    color: #1D90F4;
+    margin-bottom: 30px;
+}
+
+#output .n, .e, .p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+    /* background-color: red; */
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+}
+
+#output .n .icon, .e .icon, .p .icon{
+    color: #1D90F4;
+    font-size: 32px;
+}
+
+#loadingtext{
+    color: #1D90F4;
+    position: absolute;
+    top: 20px;
+    left: 590px;
+    z-index: 999;
+}

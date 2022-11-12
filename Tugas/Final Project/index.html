@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="asset/style.css">
+  </head>
+  <body>
+        <div class="login">
+            <div class="word-waves">
+                <span>REGISTER</span>
+                <span>REGISTER</span>
+            </div>
+            <form autocomplete="off" action="" method="post">
+            <input type="hidden" id="action" value="register">
+            <div class="input top">
+                <label for="">Name</label>
+                <input type="text" id="name" value=""> <br>
+            </div>
+            <div class="input">
+              <label for="">Username</label>
+              <input type="text" id="username" value=""> <br>
+            </div>
+            <div class="input">
+              <label for="">Password</label>
+              <input type="password" id="password" value=""> <br>
+            </div>
+            <button type="button" class="btn" onclick="submitData();">Register</button>
+            </form>
+            <a href="dashboard.html" class="bat">GO TO LOGIN</a>
+        </div>
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+        <!-- Sweet Alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

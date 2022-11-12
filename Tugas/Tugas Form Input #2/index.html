@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+           <div id="container">
+
+            <h2>Masukkan Biodata Diri</h2>
+
+                <div class="nama">
+                    <label for="">Nama Lengkap</label>
+                    <input type="text" id="nama">
+                </div>
+
+                <div class="email">
+                    <label for="">Email</label>
+                    <input type="text" id="email">
+                </div>
+
+                <div class="phone">
+                    <label for="">No.Hp</label>
+                    <input type="text" id="phone">
+                </div>
+
+                <div class="foto">
+                    <label for="">Upload Foto</label>
+                    <input type="text" id="foto">
+                </div>
+
+                <button id="submit" onclick="timeout()">Simpan</button>
+           </div>
+
+
+           
+           <p id="loadingtext"></p>
+
+
+            <div id="output">
+                <div class="center">
+                    <h2>Biodata</h2>
+                    <div class="n">
+                        <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+                        <p id="output-nama"></p>
+                    </div>
+                    <div class="e">
+                        <ion-icon class="icon" name="mail-outline"></ion-icon>
+                        <p id="output-email"></p>
+                    </div>
+                    <div class="p">
+                        <ion-icon class="icon" name="call-outline"></ion-icon>
+                        <p id="output-phone"></p>
+                    </div>
+                    <img alt="" id="output-foto">
+                </div>
+            </div>
+
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="login">
+            <div class="form">
+                <h3>Log In - Kuis 3</h3>
+                <div class="input">
+                    <label for="">Username</label>
+                    <input type="text" id="nama" onkeyup="nama()">
+                    <p id="outputNama"></p>
+                </div>
+                <div class="input">
+                    <label for="">Password</label>
+                    <input type="password" id="password" onkeyup="pass()">
+                    <p id="outputPassword"></p>
+                </div>
+                <div class="input">
+                    <label for="">Pilih Warna</label>
+                    <input type="color" id="color">
+                </div>
+                <button onclick="submit()">Login</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="img/bg.png" alt="Pac-Man">
+        </div>
+    </div>
+
+    <!-- Container Dua -->
+    <div class="containertiga" id="containertiga">
+        <div style="position: absolute;">
+            <label for="" style="color: #52b3ec;">Username :</label>
+            <label id="hasilnama" style="color: #52b3ec;"></label>
+        </div>
+
+            <div id="game">
+                
+            </div>
+            <button onclick="reset()">Reset</button>
+    </div>
+
+    <!-- Script.js -->
+    <script src="script.js"></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

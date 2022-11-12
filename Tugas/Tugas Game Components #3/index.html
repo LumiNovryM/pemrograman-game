@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Components</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body{
+            background-image: url(./img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login{
+            height: 400px;
+            width: 700px;
+            border-radius: 5px;
+            background: white;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .login h2{
+            text-align: center;
+            position: absolute;
+            top: 50px;
+        }
+        .input{
+            width: 650px;
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+        .input label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .input input{
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .login button{
+            margin-top: 50px;
+            padding: 15px 20px;
+            width: 650px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            background-color: #52b3ec;
+            cursor: pointer;
+        }
+        .containerDua{
+            height: 100vh;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+        .loginDua{
+            height: 400px;
+            width: 700px;
+            border-radius: 5px;
+            background: white;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .loginDua h2{
+            text-align: center;
+            position: absolute;
+            top: 50px;
+        }
+        .inputDua{
+            width: 650px;
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+        .loginDua button{
+            margin-top: 50px;
+            padding: 15px 20px;
+            width: 650px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            background-color: #52b3ec;
+            cursor: pointer;
+        }
+        #hasil{
+            color: #52b3ec;
+            margin-bottom: 40px;
+        }
+        .containerTiga{
+            height: 100vh;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            display: none;
+
+        }
+        .loginTiga{
+            height: 650px;
+            width: 700px;
+            border-radius: 5px;
+            background: white;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .loginTiga h2{
+            text-align: center;
+            position: absolute;
+            top: 50px;
+        }
+        .loginTiga button{
+            margin-top: 50px;
+            padding: 15px 20px;
+            width: 650px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            background-color: #52b3ec;
+            cursor: pointer;
+        }
+        .hasil{
+            position: absolute;
+            top: 130px;
+            left: 30px;
+            color: #52b3ec;
+        }
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container" id="container">
+            <div class="login">
+                <h2>PEMROGRAMAN GAMES - KUIS 2</h2>
+                <div class="input">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Username">
+                </div>
+                <button onclick="tampilkan()">Next</button>
+            </div>
+        </div>
+
+        <div class="containerDua" id="containerDua">
+            <div class="loginDua">
+                <h2>PEMROGRAMAN GAMES - KUIS 2</h2>
+                <div class="inputDua">
+                    <p id="hasil"></p>
+                    <div class="color">
+                        <label for="">Pilih Warna:</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                </div>
+                <button onclick="tampilkanDua()">Start</button>
+            </div>
+        </div>
+
+        <div class="containerTiga" id="containerTiga">
+            <div class="loginTiga">
+                <h2>PEMROGRAMAN GAMES - KUIS 2</h2>
+                <div class="hasil">
+                    <p id="hasilDua"></p>
+                </div>
+                <div id="key">
+                    
+                </div>  
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+        
+
+        <script>
+            // STEP 1
+            function tampilkan() {
+                
+                var username = document.getElementById('username').value
+
+                document.getElementById('hasil').innerHTML = "Username :"+ username
+
+                var container = document.getElementById('container')
+                var containerDua = document.getElementById('containerDua')
+
+                if(containerDua.style.display === 'none'){
+                    containerDua.style.display = 'flex'
+                }else{
+                    containerDua.style.display = 'none'
+                }
+
+                if(container.style.display === 'flex'){
+                    container.style.display = 'none'
+                }else{
+                    container.style.display = 'flex'
+                }
+
+            }
+
+            // STEP 2
+            function tampilkanDua() {
+
+                var username = document.getElementById('username').value
+                document.getElementById('hasilDua').innerHTML = "Username :" + username
+
+                var color = document.getElementById('color').value;
+
+
+                var containerDua = document.getElementById('containerDua')
+                var containerTiga = document.getElementById('containerTiga')
+
+                if(containerTiga.style.display === 'flex'){
+                    containerTiga.style.display = 'none'
+                }else{
+                    containerTiga.style.display = 'flex'
+                }
+
+                if(containerDua.style.display === 'none'){
+                    containerDua.style.display = 'flex'
+                }else{
+                    containerDua.style.display = 'none'
+                }
+
+                
+                startGame()
+               
+            }
+            var myGamePiece;
+            function startGame() {
+                    myGamePiece = new component(30, 30, color.value, 10, 120);
+                    myGameArea.start();
+                }
+
+                var myGameArea = {
+                    canvas : document.createElement("canvas"),
+                    start : function() {
+                        this.canvas.width = 480;
+                        this.canvas.height = 270;
+                        this.context = this.canvas.getContext("2d");
+                        document.getElementById('key').insertBefore(this.canvas, document.getElementById('key').childNodes[0]);
+                        this.interval = setInterval(updateGameArea, 20);
+                    },
+                    clear : function() {
+                        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                    }
+                }
+
+                function component(width, height, color, x, y) {
+                    this.width = width;
+                    this.height = height;
+                    this.x = x;
+                    this.y = y;    
+                    this.update = function(){
+                        ctx = myGameArea.context;
+                        ctx.fillStyle = color;
+                        ctx.fillRect(this.x, this.y, this.width, this.height);
+                    }
+                }
+
+                function updateGameArea() {
+                    myGameArea.clear();
+                    myGamePiece.x += 1;
+                    myGamePiece.update();
+                }
+
+                function reset() {
+                    let tanya = confirm("Yakin Ingin Mengulang?")
+                    if(tanya == true){
+                        location.reload();
+                    }
+                }
+        </script>
+</body>
+</html>

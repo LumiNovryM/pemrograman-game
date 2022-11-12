@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'pixel';
+    src: url(pixel.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'pixel', sans-serif;
+}
+
+body{
+    background-image: url(download.gif);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    margin-top: 100px;
+    border-radius: 10px;
+    background-color: #1e1462;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+/* WORD WAVES */
+.word-waves span{
+    position: absolute;
+    color: #fff;
+    font-size: 2.5rem;
+    /* transform: translate(-50%, -50%); */
+}
+
+.word-waves span:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 0.3px #3bd9d9;
+}
+
+.word-waves span:nth-child(2){
+    color: rgb(128, 198, 255);
+    -webkit-text-stroke: 1px #3bd9d9;
+    animation: animation 3s ease-in-out infinite;
+}
+
+@keyframes animation {
+    0%, 100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 68%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+.top{
+    margin-top: 90px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input label{
+    color: #22b3ec;
+}
+
+.input input{
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #1b1447;
+    color: #3bd9d9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn{
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    padding: 15px 25px ;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background: #6011bb url(pixel2.png);
+    transition-delay: 0.8s;
+    animation: animate 0.8s steps(8) infinite;
+    color: #22b3ec;
+    cursor: pointer;
+}
+
+.bat{
+    background: #ec0b36 url(pixel.png);
+    position: relative;
+    text-decoration: none;
+    height: 45px;
+    padding-top: 5px;
+    text-align: center;
+    /* line-height: 45px; */
+    width: 150px;
+    display: block;
+    border-radius: 5px;
+    line-height: 45px;
+    color: #22b3ec;
+    transition-delay: 0.8s;
+    animation: animate 0.8s steps(8) infinite;
+    cursor: pointer;
+}
+
+@keyframes animate {
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -480px;
+    }
+}
